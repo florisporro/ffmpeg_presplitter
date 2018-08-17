@@ -17,4 +17,4 @@ Press tab to switch focus from the menu to the grid selector.
 
 ## Screenshot
 
-[[https://github.com/florisporro/ffmpeg_presplitter/blob/master/screenshot.png|alt=screenshot]]
+[[https://github.com/florisporro/ffmpeg_presplitter/blob/master/screenshot.png]]
