@@ -1,0 +1,25 @@
+{
+  "name": "ffmpeg_presplitter",
+  "version": "1.0.0",
+  "description": "Takes a large resolution master video file (10's of thousands of pixels wide and high) and splits it into 'regular' resolution video files for display on video walls.",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "node ./dist/ffmpeg_presplitter.js",
+    "dev": "nodemon -I ./dist/ffmpeg_presplitter.js"
+  },
+  "author": "Floris Porro @ Stream My Event",
+  "license": "ISC",
+  "devDependencies": {
+    "blessed-vue": "^2.0.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.3.0",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-node-externals": "^1.7.2",
+    "fs-extra": "^7.0.0",
+    "moment": "^2.22.2"
+  }
+}
