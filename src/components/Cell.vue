@@ -14,7 +14,7 @@
 <script>
   export default {
     name: 'Cell',
-    props: ['cell', 'selected_x', 'selected_y'],
+    props: ['cell', 'selected_x', 'selected_y', 'selecting'],
     computed: {
       objectStyle () {
         return {
@@ -23,7 +23,7 @@
         }
       },
       color() {
-        if ((this.selected_x === this.cell.column) && (this.selected_y === this.cell.row)) return 'white';
+        if ((this.selected_x === this.cell.column) && (this.selected_y === this.cell.row) && (this.selecting)) return 'white';
         if (this.cell.status === 'rendering') return 15;
         if (this.cell.status === 'done') return 10;
         if (this.cell.status === 'error') return 1;

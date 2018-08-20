@@ -19,6 +19,7 @@
       v-for="(cell, index) in grid.cells"
       :selected_x="selected_x"
       :selected_y="selected_y"
+      :selecting="selecting"
       :cell="cell" 
       :index="index"
       :key="cell.id"/>
@@ -39,7 +40,8 @@
     data() {
       return {
         selected_x: 0,
-        selected_y: 0
+        selected_y: 0,
+        selecting: false
       }
     },
     computed: {
@@ -67,6 +69,13 @@
       this.$refs.grid.key(['left'], () => {
         // Decrease the column by 1 unless 1
         if (this.selected_x > 0) this.selected_x--;
+      });
+
+      this.$refs.grid.on('focus', () => {
+        this.selecting = true;
+      });
+      this.$refs.grid.on('blur', () => {
+        this.selecting = false;
       });
 
       // Enable or disable individual cells
