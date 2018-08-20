@@ -23,7 +23,7 @@
   import { EventBus } from '../EventBus.js';
 
   export default {
-    name: 'Setting Switcher',
+    name: 'settingSwitcher',
     props: ['changingSetting'],
     mounted() {    
       this.$refs.setting_switcher.setItems(settings[this.changingSetting]);
