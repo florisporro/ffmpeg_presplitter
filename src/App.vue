@@ -180,10 +180,10 @@
         queue_manager.stop();
       });
 
-      renderer.events.on('progress', (progress) => {
+      queue_manager.events.on('progress', (progress) => {
         this.progress.fps_history.push(progress.currentFps)
         this.progress.fps = progress.currentFps;
-        this.progress.frame = progress.frames;
+        this.progress.frames = progress.frames;
         this.progress.percentage = progress.percent;
       });
     }
