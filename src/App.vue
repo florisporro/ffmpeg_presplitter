@@ -54,7 +54,8 @@
           height: 720,
           resolution: '1280x720',
           codec: 'ProRes',
-          bitrate: '20mbps'
+          bitrate: '20mbps',
+          columnnames: 'Columns as letters'
         },
         progress: {
           fps: 0,
@@ -90,7 +91,7 @@
         try {
           if (this.ready_to_render) {
             EventBus.$emit('log', `Setting up grid with params: ${this.source.width}, ${this.source.height}, ${this.output.width}, ${this.output.height}`);
-            grid.setup(this.source.width, this.source.height, this.output.width, this.output.height);
+            grid.setup(this.source.width, this.source.height, this.output.width, this.output.height, this.output.columnnames);
           }
         } catch(e) {
           EventBus.$emit('log', "Grid error: " + e);
@@ -132,6 +133,7 @@
       EventBus.$on('setting_changed', (setting) => {
         this.activeControl = 'Menu';
         this.output[this.changingSetting] = setting;
+        this.setup_grid();
         EventBus.$emit('log', "Setting " + this.changingSetting + " changed to " + setting);
       });
 
