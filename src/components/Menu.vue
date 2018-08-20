@@ -28,15 +28,20 @@
       event: 'change_setting',
       param: 'resolution'
     },
+    // {
+    //   name: "Change output codec",
+    //   event: 'change_setting',
+    //   param: 'codec'
+    // },
+    // {
+    //   name: "Change output bitrate",
+    //   event: 'change_setting',
+    //   param: 'bitrate'
+    // },
     {
-      name: "Change output codec",
+      name: "Switch column and row IDs",
       event: 'change_setting',
-      param: 'codec'
-    },
-    {
-      name: "Change output bitrate",
-      event: 'change_setting',
-      param: 'bitrate'
+      param: 'columnnames'
     },
     {
       name: "Start queue",

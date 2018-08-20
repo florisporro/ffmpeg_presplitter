@@ -43,6 +43,10 @@ const settings = {
     '40mbps',
     '45mbps',
     '50mbps'
+  ],
+  'columnnames': [
+    'Columns as letters',
+    'Rows as letters',
   ]
 }
 
